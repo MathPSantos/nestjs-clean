@@ -1,16 +1,20 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.1.2/schema.json",
-  "extends": [
-    "ultracite"
-  ],
-  "files": {
-    "includes": ["!dist/**", "!node_modules/**"]
-  },
+  "extends": ["ultracite"],
   "linter": {
     "rules": {
       "style": {
-        "noParameterProperties": "off"
+        "noParameterProperties": "off",
+        "useImportType": "off"
       }
     }
+  },
+  "javascript": {
+    "parser": {
+      "unsafeParameterDecoratorsEnabled": true
+    }
+  },
+  "files": {
+    "includes": ["src/**/*.ts"]
   }
 }
