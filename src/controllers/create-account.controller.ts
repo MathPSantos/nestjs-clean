@@ -14,7 +14,7 @@ import { z } from 'zod';
 const createAccountSchema = z.object({
   name: z.string(),
   email: z.email(),
-  password: z.string().min(8),
+  password: z.string(),
 });
 
 type CreateAccountSchema = z.infer<typeof createAccountSchema>;
